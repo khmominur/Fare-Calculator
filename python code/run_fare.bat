@@ -1,0 +1,7 @@
+@echo off
+cd /d "C:\Users\USER\Desktop\Fare Calculation"
+
+:run
+python fare.py
+echo.
+goto run
