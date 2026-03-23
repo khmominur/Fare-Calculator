@@ -23,12 +23,12 @@ function calculateFare() {
     }
 
     function resetForm() {
-        // সব ইনপুট ক্লিয়ার করা
+        // Input Clear
         document.getElementById('gross_fare').value = "";
         document.getElementById('base_fare').value = "";
         document.getElementById('iata_com').value = "";
         document.getElementById('markup_amount').value = "";
         
-        // রেজাল্ট সেকশন হাইড করা
+        // Result Section Hide
         document.getElementById('results').style.display = "none";
     }
