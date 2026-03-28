@@ -20,7 +20,9 @@ body {
     background-size: cover;
     background-attachment: fixed;
     position: relative;
-    backdrop-filter: blur(5px); /* ব্যাকগ্রাউন্ড ব্লার */
+    backdrop-filter: blur(5px);
+    margin: 0;
+    padding-bottom: 50px;
 }
 
 .card {
