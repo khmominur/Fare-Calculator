@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SYSTEM ALERT</title>
+
+<style>
+body {
+  background: black;
+  color: lime;
+  font-family: monospace;
+  text-align: center;
+  padding-top: 100px;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+.blink {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {opacity: 0;}
+}
+
+#text {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+#progressBar {
+  width: 60%;
+  height: 20px;
+  border: 1px solid lime;
+  margin: 30px auto;
+}
+
+#progress {
+  height: 100%;
+  width: 0%;
+  background: lime;
+}
+</style>
+</head>
+
+<body>
+
+<h1 class="blink">⚠ SYSTEM BREACH DETECTED ⚠</h1>
+
+<div id="text"></div>
+
+<div id="progressBar">
+  <div id="progress"></div>
+</div>
+
+<script>
+
+const logs = [
+  "Initializing exploit...",
+  "Bypassing firewall...",
+  "Injecting payload...",
+  "Accessing /root directory...",
+  "Decrypting AES-256...",
+  "Dumping database...",
+  "Uploading to remote server..."
+];
+
+let progress = 0;
+
+const container = document.getElementById("text");
+
+// fake IP 😈
+const fakeIP = "103." + Math.floor(Math.random()*255) + "." + Math.floor(Math.random()*255) + "." + Math.floor(Math.random()*255);
+
+// show device info
+container.innerHTML += "<p>Device: " + navigator.userAgent + "</p>";
+container.innerHTML += "<p>IP: " + fakeIP + "</p><br>";
+
+function addLog() {
+  if (logs.length === 0) return;
+
+  const log = logs.shift();
+
+  const p = document.createElement("p");
+  p.innerText = "> " + log;
+
+  container.appendChild(p);
+
+  window.scrollTo(0, document.body.scrollHeight);
+
+  setTimeout(addLog, 500 + Math.random() * 1000);
+}
+
+// progress (random speed)
+function updateProgress() {
+  const bar = document.getElementById("progress");
+
+  const interval = setInterval(() => {
+    progress += Math.random() * 3;
+
+    // stuck at 99% 😏
+    if (progress > 99 && progress < 100) {
+      progress = 99;
+    }
+
+    bar.style.width = progress + "%";
+
+    if (progress >= 100) {
+      clearInterval(interval);
+      finalScreen();
+    }
+  }, 200);
+}
+
+// final 😂
+function finalScreen() {
+  document.body.style.background = "white";
+  document.body.style.color = "black";
+
+  document.body.innerHTML = `
+    <h1>😂 ভয় পাইছেন ভাই 😂</h1>
+    <button onclick="location.reload()">Reload</button>
+  `;
+}
+
+// start
+addLog();
+updateProgress();
+
+</script>
+
+</body>
+</html>
