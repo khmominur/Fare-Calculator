@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      height: 100vh;
+      font-family: Arial;
+    }
+
+    .sidebar {
+      width: 250px;
+      background: #1f2937;
+      color: white;
+      padding: 20px;
+    }
+
+    .menu {
+      display: block;
+      padding: 12px;
+      margin: 10px 0;
+      background: #374151;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+
+    .menu:hover {
+      background: #4b5563;
+    }
+
+    .content {
+      flex: 1;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sidebar">
+    <h2>My Tools</h2>
+
+    <a class="menu" href="home.html" target="frame">Home</a>
+    <a class="menu" href="Fare\fare.html" target="frame">Fare Calculator</a>
+    <a class="menu" href="Age\age-calculator.html" target="frame">Age Calculator</a>
+  </div>
+
+  <!-- Right side content load here -->
+  <iframe class="content" name="frame" src="home.html"></iframe>
+
+</body>
+</html>
