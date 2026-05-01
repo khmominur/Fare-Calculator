@@ -64,7 +64,7 @@ function generateTicketInfo() {
     });
 
     let output = segment;
-    output += "\n\nNet Fare: " + netFormatted + ".00(Per Pax)";
+    output += "\n\nNet Fare: " + netFormatted + ".00 (Per Pax)";
 
     // ১ এর বেশি pax হলে total fare আলাদা লাইনে
     if (pax > 1) {
@@ -73,7 +73,7 @@ function generateTicketInfo() {
             minimumFractionDigits: 0,
             maximumFractionDigits: 0
         });
-        output += "\nTotal Fare: " + totalFormatted + ".00(" + pax + " Pax)";
+        output += "\nTotal Fare: " + totalFormatted + ".00 (" + pax + " Pax)";
     }
 
     output += "\nBAG: " + baggage;
