@@ -32,9 +32,17 @@ function resetForm() {
     document.getElementById('base_fare').value = "";
     document.getElementById('iata_com').value = "";
     document.getElementById('markup_amount').value = "";
+
+    // Ticket Information inputs reset
+    document.getElementById('segment_input').value = "";
+    document.getElementById('baggage_input').value = "";
+    document.getElementById('pax_count').value = "1";
+
+    // Output hide
     document.getElementById('results').style.display = "none";
     document.getElementById('ticket-btn-container').style.display = "none";
     document.getElementById('ticket_output').style.display = "none";
+
     calculatedNetFare = 0;
 }
 
