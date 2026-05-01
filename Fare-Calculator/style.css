@@ -167,6 +167,89 @@ body {
             font-size: 13px;
         }
 
+/* Ticket Button */
+.btn-ticket {
+    width: 100%;
+    background: linear-gradient(135deg, #ff9800, #e65c00);
+}
+.btn-ticket:hover {
+    background: linear-gradient(135deg, #e65c00, #bf4000);
+}
+
+/* Modal */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    padding: 20px;
+}
+
+.modal-box {
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-box h3 {
+    color: var(--primary);
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 8px;
+}
+
+.modal-box textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    resize: vertical;
+}
+
+.modal-box textarea:focus {
+    border-color: var(--primary);
+}
+
+/* Ticket Output */
+.ticket-output {
+    margin-top: 15px;
+    background: #1a1a2e;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.ticket-text {
+    color: #e0e0e0;
+    font-size: 13px;
+    font-family: 'Courier New', monospace;
+    white-space: pre-wrap;
+    word-break: break-word;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.btn-copy {
+    background: #27ae60;
+    flex: 1;
+    font-size: 14px;
+    padding: 9px;
+}
+.btn-copy:hover {
+    background: #1e8449;
+}
+
 
 /* Micro Animation */
 .card {
