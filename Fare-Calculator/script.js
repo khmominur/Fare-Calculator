@@ -108,7 +108,12 @@ function generateTicketInfo() {
         output += "\nTotal Fare: " + totalFormatted + ".00 (" + pax + " Pax)";
     }
 
-    output += "\nBAG: " + baggage;
+    let baggageLines = baggage.split('\n').filter(l => l.trim() !== '');
+    if (baggageLines.length === 1) {
+        output += "\nBAG: " + baggageLines[0];
+    } else {
+        output += "\n" + baggageLines.join('\n');
+    }
 
     document.getElementById('ticket_text').innerText = output;
     document.getElementById('ticket_output').style.display = "block";
