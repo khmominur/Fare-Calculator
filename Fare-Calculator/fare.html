@@ -109,5 +109,15 @@
     <p>© 2026 Mominur Rahman. All rights reserved.</p>
 </div>
 <script src="script.js"></script>
+<script>
+    const img = new Image();
+    img.src = '04.jpg';
+    img.onload = function() {
+        document.body.style.backgroundImage = "url('04.jpg')";
+        document.body.style.backgroundPosition = "center center";
+        document.body.style.backgroundRepeat = "no-repeat";
+        document.body.style.backgroundSize = "cover";
+    };
+</script>
 </body>
 </html>
