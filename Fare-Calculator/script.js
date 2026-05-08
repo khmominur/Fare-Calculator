@@ -18,7 +18,7 @@ function calculateFare() {
     let IATA_Commission = (base_fare * iata_com) / 100;
     let net_fare = (gross_fare + AIT - IATA_Commission) + markup;
 
-    calculatedNetFare = Math.round(net_fare) + 2;
+    calculatedNetFare = Math.round(net_fare) + 1;
     calculatedGrossFare = gross_fare;
 
     document.getElementById('ait').innerText = "AIT (0.3%): " + AIT.toLocaleString();
